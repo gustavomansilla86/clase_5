@@ -159,9 +159,67 @@ def bucles_intinerantes():
     print(num)
 
 
-def while_20():
+
+def while_20(numeros= 0):
   numeros= 0
-  while numeros > 20:
+  while numeros < 20 and numeros % 2 ==0:
    print(numeros)
-   numeros += 1
-while_20()
+   numeros +=2
+   
+def n_impares():
+  lista_numero = list(range(30))
+  print(lista_numero)
+  for num in lista_numero :
+    if num % 2 == 0:
+      continue
+    print(num)
+
+def tablas():
+  numero=int(input("ingrese un numero para multiplicar: "))
+  for i in range(1,11):
+   print(numero,"x ",i,"  = ",numero*i)
+  
+def multiplos():
+  lista_numeros= list(range(1,100))
+  for num in lista_numeros :
+    if num %3 ==0 and num %5 ==0:
+      print(num," multiplo de 3 y de 5")
+    elif num % 5 == 0:
+      print(num," multiplo de 5")
+    elif num % 3 == 0:
+      print(num," multiplo de 3")
+   
+def numero_primo():
+  numero= int(input("ingresar numero: "))
+  if numero > 1:
+   for i in range(2,numero):
+    if numero % i ==0: 
+     print("el numero no es primo")
+     return
+    
+    else :
+     print("el numero es primo")
+    return
+  else:
+    print("el numero debe ser mayor que 1")
+
+def cargar_lista():
+  lista_numeros = []
+  
+  while True:
+    num = int(input("Enter a numero entre -20 y -1: "))
+    
+    if num>= -20  and num <= -1:
+      lista_numeros.append(num)
+      print(min(lista_numeros))
+      print(lista_numeros)
+    else:
+      print(lista_numeros)
+      print("tiene que ser entre -1 y -20")
+    if len(lista_numeros) >0 and min(lista_numeros)<= -20: 
+     break
+
+def cadena():
+  cadena_letra=["hola Politecnico . esto es una practica"]
+  letra = "n"
+   
